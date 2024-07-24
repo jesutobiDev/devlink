@@ -1,33 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Instrument Sans", sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .button-primary-default {
+    border-radius: 8px;
+    background-color: #633CFF;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+  }
+
+  .button-primary-active{
+    background-color: #BEADFF;
+    border-radius: 8px;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+
+  }
+
+  .button-primary-disabled{
+    border-radius: 8px;
+    background-color: #633CFF;
+    opacity: 0.25;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+  }
+
+  .button-secondary-default{
+    border-radius: 8px;
+    color: #633CFF;
+    border: 1px solid #633CFF;
+    background-color: #FFFFFF;
+    transition: all 0.3s ease;
+  }
+
+  .button-secondary-active{
+    border-radius: 8px;
+    color: #633CFF;
+    border: 1px solid #633CFF;
+    background-color: #EFEBFF;
+    transition: all 0.3s ease;
+  }
+
+  .button-secondary-disabled{
+    border-radius: 8px;
+    color: #633CFF;
+    border: 1px solid #633CFF;
+    background-color: #FFFFFF;
+    opacity: 0.25;
+    transition: all 0.3s ease;
+  }
+
+  .tabs-active{
+    background-color: #EFEBFF;
+    color: #633CFF;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .tabs-default{
+    color: #737373;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    transition: all 0.3s ease;
+  }
+
+  .tabs-hover{
+    color: #633CFF;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    transition: all 0.3s ease;
+  }
+
+  .input-text-empty {
+    border: 1px solid #D9D9D9;
+    color: #333333;
+    border-radius: 8px;
+    transition: border 0.3s, box-shadow 0.3s, opacity 0.3s;
+  }
+
+  .input-text-filled {
+    border: 1px solid #D9D9D9;
+    color: #333333;
+    border-radius: 8px;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+
+  .input-text-active {
+    border: 1px solid #633CFF;
+    box-shadow: 0 0 32px 0 #633cff40;
+    color: #333333;
+    border-radius: 8px;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+
+  .input-text-error {
+    border: 1px solid #FF3939;
+    color: #FF3939;
+    border-radius: 8px;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+
+
 }
